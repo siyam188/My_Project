@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digital Clock</title>
+</head>
+<body>
+    <div class="mywatch">
+        <span class="H"></span>
+        <span class="M"></span>
+        <span class="date"></span>
+    </div>
+    <script>
+        function myTime()
+        {
+            var myDate = new Date();
+            var hr,min = (myDate.getMinutes()<10)? "0"+myDate.getMinutes():myDate.getMinutes(),
+                sec=(myDate.getSeconds()<10)? "0" +myDate.getSeconds():myDate.getSeconds(),
+                m=(myDate.getHours()>=12)? "PM":"AM";
+            if(myDate.getHours()==0){
+                     hr=12;
+            }
+            else if(myDate.getHours()>12)
+            {
+                   hr = myDate.getHours() -12;
+            }
+            else
+            {
+                hr=myDate.getHours();
+            }
+            var currentTime=hr + ":"+min+":" + sec+ ":";
+            document.getElementsByClassName("H")[0].innerHTML = currentTime;
+            document.getElementsByClassName("M")[1].innerHTML = m;
+           var myday=["sunday","monday",]
+        }
+    </script>
+</body>
+</html>
