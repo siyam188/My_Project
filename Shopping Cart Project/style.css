@@ -1,0 +1,391 @@
+*
+{
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+}
+
+
+body
+{
+    background: #f5f6fa;
+
+    color: #222;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.main-container
+{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   Product Container
+========================= */
+
+.product-container
+{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    width: 75%;
+}
+
+
+/* =========================
+   Product Card
+========================= */
+
+.card
+{
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+
+.card:hover
+{
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   Product Image
+========================= */
+
+.card-img
+{
+    width: 150px;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   Product Title
+========================= */
+
+.card h5
+{
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    height: 48px;
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   Price
+========================= */
+
+.card h3
+{
+    color: #2563eb;
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   Description
+========================= */
+
+.card p
+{
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    height: 65px;
+
+    overflow: hidden;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.card button
+{
+    border: none;
+
+    padding: 10px 14px;
+
+    margin: 4px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.card button:first-of-type
+{
+    background: #e5e7eb;
+
+    color: #222;
+}
+
+
+.card button:first-of-type:hover
+{
+    background: #d1d5db;
+}
+
+
+.card button:last-of-type
+{
+    background: #2563eb;
+
+    color: white;
+}
+
+
+.card button:last-of-type:hover
+{
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   Cart
+========================= */
+
+.cart-container
+{
+    width: 25%;
+
+    min-height: 300px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    padding: 20px;
+
+    position: sticky;
+
+    top: 20px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   Cart Header
+========================= */
+
+.cart-container h4
+{
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+#count
+{
+    background: #2563eb;
+
+    color: white;
+
+    padding: 4px 9px;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   Cart Items
+========================= */
+
+.cart-main-container
+{
+    max-height: 400px;
+
+    overflow-y: auto;
+
+    margin: 15px 0;
+}
+
+
+.cart-info
+{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #f8fafc;
+
+    padding: 10px;
+
+    margin-bottom: 8px;
+
+    border-radius: 6px;
+
+    border: 1px solid #eee;
+}
+
+
+.cart-info p
+{
+    font-size: 14px;
+
+    color: #333;
+
+    text-align: left;
+}
+
+
+.cart-info .price
+{
+    color: #2563eb;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   Total
+========================= */
+
+.cart-container h3
+{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+
+    font-size: 18px;
+}
+
+
+#total
+{
+    color: #16a34a;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1000px)
+{
+    .product-container
+    {
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 70%;
+    }
+
+
+    .cart-container
+    {
+        width: 30%;
+    }
+}
+
+
+@media (max-width: 700px)
+{
+    .main-container
+    {
+        flex-direction: column;
+    }
+
+
+    .product-container
+    {
+        width: 100%;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .cart-container
+    {
+        width: 100%;
+
+        position: static;
+    }
+}
+
+
+@media (max-width: 500px)
+{
+    .product-container
+    {
+        grid-template-columns: 1fr;
+    }
+
+
+    .main-container
+    {
+        padding: 15px;
+    }
+}
