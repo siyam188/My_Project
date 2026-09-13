@@ -1,0 +1,1534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #7d164d,
+            #360021 45%,
+            #16000e
+        );
+
+    color: white;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts span {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    opacity: 0.25;
+
+    pointer-events: none;
+
+    animation:
+        heartFloat
+        12s linear infinite;
+
+    z-index: 1;
+}
+
+
+.hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 15%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(3) {
+    left: 30%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(4) {
+    left: 45%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 60%;
+    animation-delay: 7s;
+}
+
+.hearts span:nth-child(6) {
+    left: 75%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(7) {
+    left: 85%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(8) {
+    left: 95%;
+    animation-delay: 6s;
+}
+
+
+@keyframes heartFloat {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.4;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-btn {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(15px);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 100;
+
+    transition: 0.3s;
+}
+
+
+.music-btn:hover {
+
+    transform:
+        rotate(15deg)
+        scale(1.1);
+
+    background:
+        rgba(255,255,255,0.25);
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.welcome-card {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    text-align: center;
+
+    padding: 55px 35px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.20);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 80px
+        rgba(0,0,0,0.35);
+}
+
+
+.small-flower {
+
+    font-size: 45px;
+
+    animation:
+        flowerMove
+        2s infinite;
+}
+
+
+@keyframes flowerMove {
+
+    0%,
+    100% {
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform:
+            rotate(8deg)
+            scale(1.1);
+    }
+
+}
+
+
+.small-title {
+
+    color: #ffc5db;
+
+    margin: 15px 0;
+}
+
+
+.welcome-card h1 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 65px;
+}
+
+
+.welcome-card h2 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 38px;
+
+    color: #ffb3d0;
+}
+
+
+.welcome-text {
+
+    max-width: 450px;
+
+    margin: 20px auto;
+
+    color: #ffd9e7;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   GIFT
+========================= */
+
+.gift {
+
+    width: 130px;
+
+    height: 120px;
+
+    margin: 35px auto;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+
+.gift:hover {
+
+    transform:
+        scale(1.1)
+        translateY(-8px);
+}
+
+
+.gift-box {
+
+    position: absolute;
+
+    width: 110px;
+
+    height: 80px;
+
+    left: 10px;
+
+    bottom: 0;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4d91,
+            #b00050
+        );
+
+    box-shadow:
+        0 15px 30px
+        rgba(0,0,0,0.3);
+}
+
+
+.gift-top {
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 25px;
+
+    left: 5px;
+
+    top: 25px;
+
+    border-radius: 7px;
+
+    background: #ff70aa;
+
+    z-index: 2;
+}
+
+
+.ribbon {
+
+    width: 18px;
+
+    height: 100%;
+
+    background: #ffd1e3;
+
+    position: absolute;
+
+    left: 46px;
+}
+
+
+.gift-bow {
+
+    position: absolute;
+
+    top: -5px;
+
+    left: 42px;
+
+    font-size: 50px;
+
+    z-index: 5;
+
+    animation:
+        bowMove
+        1.5s infinite;
+}
+
+
+@keyframes bowMove {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.primary-btn {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4d91,
+            #c41462
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,45,130,0.35);
+
+    transition: 0.3s;
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 40px
+        rgba(255,45,130,0.5);
+}
+
+
+.hint {
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #ffc9dc;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+
+    display: none;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    text-align: center;
+
+    padding:
+        80px 20px 60px;
+}
+
+
+.flowers-top {
+
+    font-size: 30px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 25px;
+
+    animation:
+        flowerFloat
+        3s infinite;
+}
+
+
+@keyframes flowerFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+.hero-small {
+
+    color: #ffc4d9;
+
+    font-size: 15px;
+}
+
+
+.hero h1 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 85px;
+
+    margin-top: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ffb0d0,
+            #fff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero h2 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 45px;
+
+    color: #ffb1d1;
+
+    margin-top: 5px;
+}
+
+
+.cake {
+
+    font-size: 75px;
+
+    margin: 20px;
+
+    animation:
+        cakeMove
+        2s infinite;
+}
+
+
+@keyframes cakeMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+.typewriter {
+
+    max-width: 750px;
+
+    margin: 25px auto;
+
+    min-height: 80px;
+
+    line-height: 1.8;
+
+    color: #ffe0eb;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section-box,
+.letter-section,
+.love-section,
+.memories,
+.final-section {
+
+    margin-top: 60px;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(15px);
+}
+
+
+.section-box h2,
+.letter-section h2,
+.love-section h2,
+.memories h2 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 42px;
+
+    color: #ffb4d1;
+}
+
+
+.section-subtitle {
+
+    color: #ffd9e7;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 15px;
+
+    max-width: 700px;
+
+    margin: 30px auto;
+}
+
+
+.time-box {
+
+    padding: 25px 10px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.18);
+}
+
+
+.time-box strong {
+
+    display: block;
+
+    font-size: 38px;
+
+    color: white;
+}
+
+
+.time-box span {
+
+    font-size: 13px;
+
+    color: #ffbdd5;
+}
+
+
+.date-text {
+
+    color: #ffc7db;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.flower-decoration {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.letter {
+
+    max-width: 750px;
+
+    margin: 30px auto 0;
+
+    text-align: left;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,100,160,0.12),
+            rgba(255,255,255,0.05)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    line-height: 1.9;
+
+    color: #ffe2ed;
+}
+
+
+.letter p {
+
+    margin-bottom: 18px;
+}
+
+
+.signature {
+
+    text-align: right;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 30px;
+
+    color: #ff9fc5;
+}
+
+
+/* =========================
+   STORY FLOWERS
+========================= */
+
+.flower-row {
+
+    font-size: 30px;
+
+    letter-spacing: 8px;
+
+    margin: 25px 0;
+
+    animation:
+        flowerFloat
+        3s infinite;
+}
+
+
+/* =========================
+   STORY GALLERY
+========================= */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+
+    margin-top: 20px;
+}
+
+
+.photo {
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.20);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.25);
+
+    transition:
+        0.5s;
+
+    position: relative;
+}
+
+
+.photo:hover {
+
+    transform:
+        translateY(-12px)
+        scale(1.02);
+
+    box-shadow:
+        0 20px 50px
+        rgba(255,30,130,0.30);
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.6s;
+}
+
+
+.photo:hover img {
+
+    transform:
+        scale(1.08);
+}
+
+
+.photo-text {
+
+    padding:
+        20px 18px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(130,0,65,0.96),
+            rgba(65,0,35,0.96)
+        );
+}
+
+
+.story-number {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.25);
+
+    color: #ffb1d0;
+
+    font-weight: 600;
+
+    font-size: 13px;
+}
+
+
+.photo-text h3 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 28px;
+
+    color: white;
+
+    margin-bottom: 12px;
+
+    line-height: 1.3;
+}
+
+
+.photo-text p {
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #ffe1ec;
+
+    text-align: center;
+}
+
+
+.bottom-flowers {
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   LOVE CARDS
+========================= */
+
+.love-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+
+.love-card {
+
+    padding: 25px 15px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    transition: 0.4s;
+}
+
+
+.love-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    background:
+        rgba(255,255,255,0.13);
+}
+
+
+.love-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 12px;
+}
+
+
+.love-card h3 {
+
+    color: white;
+
+    margin-bottom: 10px;
+}
+
+
+.love-card p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #ffd9e8;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-card {
+
+    padding: 30px;
+}
+
+
+.final-flowers {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+
+.final-card h2 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 40px;
+
+    color: #ffb1d0;
+}
+
+
+.final-card p {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    line-height: 1.8;
+
+    color: #ffdce9;
+}
+
+
+.big-heart {
+
+    font-size: 80px;
+
+    animation:
+        heartBeat
+        1.2s infinite;
+}
+
+
+@keyframes heartBeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.final-card h1 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 70px;
+
+    color: #ff8fbc;
+
+    text-shadow:
+        0 5px 30px
+        rgba(255,60,140,0.5);
+}
+
+
+/* =========================
+   WISH
+========================= */
+
+.wish-area {
+
+    text-align: center;
+
+    padding: 60px 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #ffc4da;
+}
+
+
+.footer-flowers {
+
+    font-size: 30px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-small {
+
+    margin-top: 8px;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   POPUP
+========================= */
+
+.popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(20,0,12,0.75);
+
+    backdrop-filter: blur(10px);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 500;
+}
+
+
+.popup-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #751346,
+            #35001e
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.20);
+
+    box-shadow:
+        0 25px 80px
+        rgba(0,0,0,0.5);
+
+    animation:
+        popupOpen
+        0.4s ease;
+}
+
+
+@keyframes popupOpen {
+
+    from {
+
+        transform: scale(0.7);
+
+        opacity: 0;
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}
+
+
+.close-btn {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+.popup-flower {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+.popup-card h2 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 35px;
+
+    color: #ffb3d1;
+}
+
+
+.popup-card p {
+
+    line-height: 1.8;
+
+    color: #ffe0eb;
+
+    margin: 20px 0;
+}
+
+
+.popup-heart {
+
+    font-size: 55px;
+
+    animation:
+        heartBeat
+        1s infinite;
+}
+
+
+.popup-card h3 {
+
+    margin-top: 15px;
+
+    color: #ffb4d1;
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+
+    position: fixed;
+
+    top: -50px;
+
+    z-index: 1000;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   FLOATING FLOWERS
+========================= */
+
+.flower {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    animation:
+        flowerUp
+        linear
+        forwards;
+}
+
+
+@keyframes flowerUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .love-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .welcome {
+
+        padding: 15px;
+    }
+
+
+    .welcome-card {
+
+        padding:
+            40px 20px;
+    }
+
+
+    .welcome-card h1 {
+
+        font-size: 48px;
+    }
+
+
+    .welcome-card h2 {
+
+        font-size: 30px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 55px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 30px;
+    }
+
+
+    .countdown {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .love-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .photo img {
+
+        height: 350px;
+    }
+
+
+    .letter {
+
+        padding: 25px;
+    }
+
+
+    .final-card h1 {
+
+        font-size: 55px;
+    }
+
+
+    .flower-row {
+
+        font-size: 22px;
+
+        letter-spacing: 3px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .photo img {
+
+        height: 300px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+    }
+
+
+    .final-card h1 {
+
+        font-size: 48px;
+    }
+
+}
